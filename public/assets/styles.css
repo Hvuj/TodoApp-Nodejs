@@ -1,0 +1,26 @@
+
+button {
+    max-width: 750px;
+    min-width: 750px;
+}
+
+td {
+    border: solid rgb(253, 194, 0) 1px;
+    border-radius: 50px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    transition-duration: 0.39355s;
+
+}
+
+td:hover {
+    text-decoration: line-through;
+    background: rgba(255, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+h1 {
+    background: url(/assets/Todo.png) no-repeat center;
+    margin-bottom: 0;
+    text-indent: -10000px;
+}

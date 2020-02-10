@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-List</title>
+    <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/todo-list.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles.css">
+</head>
+
+<body class="bg-light container justify-content-center">
+    <h1 class="mt-5">Todo-List</h1>
+    <div class="mt-5">
+        <div class="form-group">
+            <form class=" text-center" method="POST" action="/todo">
+                <input class="form-control" type="text" name="item" placeholder="Add new task" required>
+                <button class="btn btn-info mt-3" type="submit">Add Task</button>
+            </form>
+            <table class="table table-success mt-5">
+                <thead>
+                    <tr class="text-center">
+                        <th scope="col">Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-success">
+                        <% for(var i=0; i<todos.length; i++){ %>
+                        <td class="list-group-item"><%= todos[i].item %></td>
+                        <% } %>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
